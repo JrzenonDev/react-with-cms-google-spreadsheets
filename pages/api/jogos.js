@@ -12,7 +12,7 @@ export default async function(req, res) {
   });
 
   await doc.loadInfo(); // carrega as infos da planilha
-  console.log('Título da planilha', doc.title);
+  //console.log('Título da planilha', doc.title);
 
   const sheet = doc.sheetsByIndex[0]; // pega a planilha
   const rows = await sheet.getRows(); // pega as linhas
@@ -24,12 +24,10 @@ export default async function(req, res) {
     };
   });
 
-  console.log(jogos);
+  //console.log(jogos);
 
   res.send({
     title: doc.title,
-    totalJogos: sheet.rowCount,
-
-    jogos
+    games: jogos,
   });
 }

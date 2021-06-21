@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Home(jogos) {
+function Home({ jogos }) {
   console.log(jogos);
 
   return (
@@ -47,6 +47,10 @@ function Home(jogos) {
           margin: auto;
         }
 
+        main img {
+          max-width: 200px;
+        }
+
         h1 {
           text-align: center;
           margin-bottom: 32px;
@@ -60,3 +64,5 @@ function Home(jogos) {
     </main>
   );
 }
+
+export default Home;
